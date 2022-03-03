@@ -115,6 +115,14 @@ final class GreeterWithNameTests: XCTestCase {
         XCTAssertEqual(result, "Good morning, Alberto.")
     }
     
+    func test_greetAfternoon_withBeryl_shouldSayGoodAfternoonBeryl() {
+        let greeter = setupGreeter(name: "Beryl")
+        
+        let result = greeter.greet(time: date(hour: 13, minute: 00))
+        
+        XCTAssertEqual(result, "Good afternoon, Beryl.")
+    }
+    
     private func setupGreeter(name: String) -> Greeter {
         return Greeter(name: name)
     }

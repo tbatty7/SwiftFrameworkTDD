@@ -26,7 +26,7 @@ struct Greeter {
         for (index, greetingTime) in greetingTimes.enumerated() {
             if theHour >= greetingTime.from && theHour < greetingTimes[index + 1].from {
                 if !name.isEmpty {
-                    return "\(greetingTime.greeting), Alberto."
+                    return "\(greetingTime.greeting), \(name)."
                 }
                 return greetingTime.greeting + "."
             }
