@@ -14,13 +14,13 @@ struct Greeter {
     
     func greet(time: Date) -> String {
         let theHour = hour(for: time)
-        if theHour <= 4 {
+        if theHour < 5 {
             return "Good evening."
         }
-        if theHour >= 5 && theHour <= 11 {
+        if theHour >= 5 && theHour < 12 {
             return "Good morning."
         }
-        if theHour >= 12 && theHour <= 16 {
+        if theHour >= 12 && theHour < 17 {
             return "Good afternoon."
         }
         if theHour >= 17 {
