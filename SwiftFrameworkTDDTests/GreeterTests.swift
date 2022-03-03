@@ -1,10 +1,10 @@
 @testable import SwiftFrameworkTDD
 import XCTest
 
-final class GreeterTests: XCTestCase {
+final class GreeterWithoutNameTests: XCTestCase {
     
     func test_greet_with1159am_shouldSayGoodMorning() throws {
-        let greeter = Greeter(name: "")
+        let greeter = setupGreeterWithNoName()
         
         let result = greeter.greet(time: date(hour: 11, minute: 59))
         
@@ -12,11 +12,15 @@ final class GreeterTests: XCTestCase {
     }
     
     func test_greet_with1200pm_shouldSayGoodAfternoon() {
-        let greeter = Greeter(name: "")
+        let greeter = setupGreeterWithNoName()
         
         let result = greeter.greet(time: date(hour: 12, minute: 00))
         
         XCTAssertEqual(result, "Good afternoon.")
+    }
+    
+    private func setupGreeterWithNoName() -> Greeter {
+        return Greeter(name: "")
     }
     
     private func date(hour: Int, minute: Int) -> Date {
