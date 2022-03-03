@@ -112,7 +112,7 @@ final class GreeterWithNameTests: XCTestCase {
         
         let result = greeter.greet(time: date(hour: 8, minute: 00))
         
-        XCTAssertEqual(result, "Good morning Alberto.")
+        XCTAssertEqual(result, "Good morning, Alberto.")
     }
     
     private func setupGreeter(name: String) -> Greeter {

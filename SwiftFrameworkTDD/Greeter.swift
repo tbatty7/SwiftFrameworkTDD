@@ -23,7 +23,7 @@ struct Greeter {
     
     func greet(time: Date) -> String {
         if !name.isEmpty {
-            return "Good morning Alberto."
+            return "Good morning, Alberto."
         }
         let theHour = hour(for: time)
         for (index, greetingTime) in greetingTimes.enumerated() {
