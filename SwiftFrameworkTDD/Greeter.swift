@@ -22,12 +22,12 @@ struct Greeter {
     }
     
     func greet(time: Date) -> String {
-        if !name.isEmpty {
-            return "Good morning, Alberto."
-        }
         let theHour = hour(for: time)
         for (index, greetingTime) in greetingTimes.enumerated() {
             if theHour >= greetingTime.from && theHour < greetingTimes[index + 1].from {
+                if !name.isEmpty {
+                    return "\(greetingTime.greeting), Alberto."
+                }
                 return greetingTime.greeting + "."
             }
         }
