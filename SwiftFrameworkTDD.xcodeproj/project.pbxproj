@@ -11,6 +11,7 @@
 		224268CE27D126C300DCE413 /* SwiftFrameworkTDD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 224268C327D126C300DCE413 /* SwiftFrameworkTDD.framework */; };
 		224268D427D126C300DCE413 /* SwiftFrameworkTDD.h in Headers */ = {isa = PBXBuildFile; fileRef = 224268C627D126C300DCE413 /* SwiftFrameworkTDD.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		224268DE27D127F700DCE413 /* GreeterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224268DD27D127F700DCE413 /* GreeterTests.swift */; };
+		224268E027D129F900DCE413 /* Greeter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224268DF27D129F900DCE413 /* Greeter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		224268C727D126C300DCE413 /* SwiftFrameworkTDD.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = SwiftFrameworkTDD.docc; sourceTree = "<group>"; };
 		224268CD27D126C300DCE413 /* SwiftFrameworkTDDTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftFrameworkTDDTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		224268DD27D127F700DCE413 /* GreeterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreeterTests.swift; sourceTree = "<group>"; };
+		224268DF27D129F900DCE413 /* Greeter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Greeter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 			children = (
 				224268C627D126C300DCE413 /* SwiftFrameworkTDD.h */,
 				224268C727D126C300DCE413 /* SwiftFrameworkTDD.docc */,
+				224268DF27D129F900DCE413 /* Greeter.swift */,
 			);
 			path = SwiftFrameworkTDD;
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				224268E027D129F900DCE413 /* Greeter.swift in Sources */,
 				224268C827D126C300DCE413 /* SwiftFrameworkTDD.docc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -396,6 +400,7 @@
 		224268DB27D126C300DCE413 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -411,6 +416,7 @@
 		224268DC27D126C300DCE413 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
