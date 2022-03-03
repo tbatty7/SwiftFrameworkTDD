@@ -13,10 +13,14 @@ struct Greeter {
     }
     
     func greet(time: Date) -> String {
-        let components = Calendar.current.dateComponents([.hour], from: time)
-        if components.hour ?? 0 == 12 {
+        if hour(for: time) == 12 {
             return "Good afternoon."
         }
         return "Good morning."
+    }
+    
+    fileprivate func hour(for time: Date) -> Int {
+        let components = Calendar.current.dateComponents([.hour], from: time)
+        return components.hour ?? 0
     }
 }
