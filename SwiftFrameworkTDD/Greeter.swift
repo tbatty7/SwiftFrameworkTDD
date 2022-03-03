@@ -21,16 +21,16 @@ struct Greeter {
     
     func greet(time: Date) -> String {
         let theHour = hour(for: time)
-        if theHour < 5 {
+        if theHour < greetingTimes[1].from {
             return greetingTimes[0].greeting
         }
-        if theHour >= 5 && theHour < 12 {
+        if theHour >= greetingTimes[1].from && theHour < greetingTimes[2].from {
             return greetingTimes[1].greeting
         }
-        if theHour >= 12 && theHour < 17 {
+        if theHour >= greetingTimes[2].from && theHour < greetingTimes[3].from {
             return greetingTimes[2].greeting
         }
-        if theHour >= 17 {
+        if theHour >= greetingTimes[3].from {
             return greetingTimes[3].greeting
         }
         return ""
