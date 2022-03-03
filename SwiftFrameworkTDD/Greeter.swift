@@ -21,7 +21,7 @@ struct Greeter {
         self.name = name
     }
     
-    func greeting(time: Date) -> String {
+    private func greeting(time: Date) -> String {
         let theHour = hour(for: time)
         for (index, greetingTime) in greetingTimes.enumerated() {
             if theHour >= greetingTime.from && theHour < greetingTimes[index + 1].from {
@@ -33,10 +33,11 @@ struct Greeter {
     
     func greet(time: Date) -> String {
         let hello = greeting(time: time)
-        if !name.isEmpty {
+        if name.isEmpty {
+            return hello + "."
+        } else {
             return "\(hello), \(name)."
         }
-        return hello + "."
     }
     
     fileprivate func hour(for time: Date) -> Int {
