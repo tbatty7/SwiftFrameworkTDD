@@ -8,6 +8,13 @@
 import Foundation
 
 struct Greeter {
+    private let greetingTimes: [(from: Int, greeting: String)] = [
+        (0, "Good evening."),
+        (5, "Good morning."),
+        (12, "Good afternoon."),
+        (17, "Good evening.")
+    ]
+    
     init(name: String) {
         
     }
@@ -15,16 +22,16 @@ struct Greeter {
     func greet(time: Date) -> String {
         let theHour = hour(for: time)
         if theHour < 5 {
-            return "Good evening."
+            return greetingTimes[0].greeting
         }
         if theHour >= 5 && theHour < 12 {
-            return "Good morning."
+            return greetingTimes[1].greeting
         }
         if theHour >= 12 && theHour < 17 {
-            return "Good afternoon."
+            return greetingTimes[2].greeting
         }
         if theHour >= 17 {
-            return "Good evening."
+            return greetingTimes[3].greeting
         }
         return ""
     }
