@@ -10,10 +10,10 @@ import Foundation
 struct Greeter {
     private let name: String
     private let greetingTimes: [(from: Int, greeting: String)] = [
-        (0, "Good evening."),
-        (5, "Good morning."),
-        (12, "Good afternoon."),
-        (17, "Good evening."),
+        (0, "Good evening"),
+        (5, "Good morning"),
+        (12, "Good afternoon"),
+        (17, "Good evening"),
         (24, "SENTINEL")
     ]
     
@@ -28,7 +28,7 @@ struct Greeter {
         let theHour = hour(for: time)
         for (index, greetingTime) in greetingTimes.enumerated() {
             if theHour >= greetingTime.from && theHour < greetingTimes[index + 1].from {
-                return greetingTime.greeting
+                return greetingTime.greeting + "."
             }
         }
 
