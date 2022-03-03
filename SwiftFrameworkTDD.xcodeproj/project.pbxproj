@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		224268C827D126C300DCE413 /* SwiftFrameworkTDD.docc in Sources */ = {isa = PBXBuildFile; fileRef = 224268C727D126C300DCE413 /* SwiftFrameworkTDD.docc */; };
 		224268CE27D126C300DCE413 /* SwiftFrameworkTDD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 224268C327D126C300DCE413 /* SwiftFrameworkTDD.framework */; };
-		224268D327D126C300DCE413 /* SwiftFrameworkTDDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224268D227D126C300DCE413 /* SwiftFrameworkTDDTests.swift */; };
 		224268D427D126C300DCE413 /* SwiftFrameworkTDD.h in Headers */ = {isa = PBXBuildFile; fileRef = 224268C627D126C300DCE413 /* SwiftFrameworkTDD.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		224268DE27D127F700DCE413 /* GreeterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224268DD27D127F700DCE413 /* GreeterTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +28,7 @@
 		224268C627D126C300DCE413 /* SwiftFrameworkTDD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftFrameworkTDD.h; sourceTree = "<group>"; };
 		224268C727D126C300DCE413 /* SwiftFrameworkTDD.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = SwiftFrameworkTDD.docc; sourceTree = "<group>"; };
 		224268CD27D126C300DCE413 /* SwiftFrameworkTDDTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftFrameworkTDDTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		224268D227D126C300DCE413 /* SwiftFrameworkTDDTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftFrameworkTDDTests.swift; sourceTree = "<group>"; };
+		224268DD27D127F700DCE413 /* GreeterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreeterTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +80,7 @@
 		224268D127D126C300DCE413 /* SwiftFrameworkTDDTests */ = {
 			isa = PBXGroup;
 			children = (
-				224268D227D126C300DCE413 /* SwiftFrameworkTDDTests.swift */,
+				224268DD27D127F700DCE413 /* GreeterTests.swift */,
 			);
 			path = SwiftFrameworkTDDTests;
 			sourceTree = "<group>";
@@ -202,7 +202,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				224268D327D126C300DCE413 /* SwiftFrameworkTDDTests.swift in Sources */,
+				224268DE27D127F700DCE413 /* GreeterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
