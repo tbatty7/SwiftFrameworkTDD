@@ -21,18 +21,22 @@ struct Greeter {
         self.name = name
     }
     
-    func greet(time: Date) -> String {
+    func greeting(time: Date) -> String {
         let theHour = hour(for: time)
         for (index, greetingTime) in greetingTimes.enumerated() {
             if theHour >= greetingTime.from && theHour < greetingTimes[index + 1].from {
-                if !name.isEmpty {
-                    return "\(greetingTime.greeting), \(name)."
-                }
-                return greetingTime.greeting + "."
+                return greetingTime.greeting
             }
         }
-
         return ""
+    }
+    
+    func greet(time: Date) -> String {
+        let hello = greeting(time: time)
+        if !name.isEmpty {
+            return "\(hello), \(name)."
+        }
+        return hello + "."
     }
     
     fileprivate func hour(for time: Date) -> Int {
