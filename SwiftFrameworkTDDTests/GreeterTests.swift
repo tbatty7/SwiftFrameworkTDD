@@ -7,5 +7,6 @@ final class GreeterTests: XCTestCase {
         let greeter = Greeter(name: "")
         let components = DateComponents(calendar: Calendar.current, hour: 11, minute: 59)
         let time = components.date!
+        let result: String = greeter.greet(time: time)
     }
 }
