@@ -27,13 +27,38 @@ final class GreeterWithoutNameTests: XCTestCase {
         XCTAssertEqual(result, "Good afternoon.")
     }
     
-    func test_greet_with200pm_shouldSayGoodAfternoon() {
+    func test_greet_with2pm_shouldSayGoodAfternoon() {
         let greeter = setupGreeterWithNoName()
         
         let result = greeter.greet(time: date(hour: 14, minute: 00))
         
         XCTAssertEqual(result, "Good afternoon.")
     }
+    
+    func test_greet_with5pm_shouldSayGoodEvening() {
+        let greeter = setupGreeterWithNoName()
+        
+        let result = greeter.greet(time: date(hour: 17, minute: 00))
+        
+        XCTAssertEqual(result, "Good evening.")
+    }
+    
+    func test_greet_with1159pm_shouldSayGoodEvening() {
+        let greeter = setupGreeterWithNoName()
+        
+        let result = greeter.greet(time: date(hour: 23, minute: 59))
+        
+        XCTAssertEqual(result, "Good evening.")
+    }
+    
+    func test_greet_with7pm_shouldSayGoodEvening() {
+        let greeter = setupGreeterWithNoName()
+        
+        let result = greeter.greet(time: date(hour: 19, minute: 00))
+        
+        XCTAssertEqual(result, "Good evening.")
+    }
+    
     
     private func setupGreeterWithNoName() -> Greeter {
         return Greeter(name: "")
