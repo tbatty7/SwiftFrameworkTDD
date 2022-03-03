@@ -34,7 +34,7 @@ struct Greeter {
     func greet(time: Date) -> String {
         let hello = greeting(time: time)
         if name.isEmpty {
-            return hello + "."
+            return "\(hello)."
         } else {
             return "\(hello), \(name)."
         }
