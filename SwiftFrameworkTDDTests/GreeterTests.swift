@@ -103,9 +103,24 @@ final class GreeterWithoutNameTests: XCTestCase {
     private func setupGreeterWithNoName() -> Greeter {
         return Greeter(name: "")
     }
+}
+
+final class GreeterWithNameTests: XCTestCase {
     
-    private func date(hour: Int, minute: Int) -> Date {
-        let components = DateComponents(calendar: Calendar.current, hour: hour, minute: minute)
-        return components.date!
+    func test_greetMorning_withAlberto_shouldSayGoodMorningAlberto() {
+        let greeter = setupGreeter(name: "Alberto")
+        
+        let result = greeter.greet(time: date(hour: 8, minute: 00))
+        
+        XCTAssertEqual(result, "Good morning Alberto.")
     }
+    
+    private func setupGreeter(name: String) -> Greeter {
+        return Greeter(name: name)
+    }
+}
+
+private func date(hour: Int, minute: Int) -> Date {
+    let components = DateComponents(calendar: Calendar.current, hour: hour, minute: minute)
+    return components.date!
 }

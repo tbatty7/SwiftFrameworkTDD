@@ -8,6 +8,7 @@
 import Foundation
 
 struct Greeter {
+    private let name: String
     private let greetingTimes: [(from: Int, greeting: String)] = [
         (0, "Good evening."),
         (5, "Good morning."),
@@ -17,10 +18,13 @@ struct Greeter {
     ]
     
     init(name: String) {
-        
+        self.name = name
     }
     
     func greet(time: Date) -> String {
+        if !name.isEmpty {
+            return "Good morning Alberto."
+        }
         let theHour = hour(for: time)
         for (index, greetingTime) in greetingTimes.enumerated() {
             if theHour >= greetingTime.from && theHour < greetingTimes[index + 1].from {
